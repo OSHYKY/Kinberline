@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mobile nav dropdown
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('nav-toggle');
-  const links = document.getElementById('nav-links');
+ const links = document.querySelector('.nav-links');
+
 
   if (toggle && links) {
     toggle.addEventListener('click', () => {
@@ -31,3 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
