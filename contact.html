@@ -199,35 +199,39 @@
     </div>
   </nav>
 
-  <main class="container">
-    <section class="fade-in" style="padding:48px 0">
-      <h2>Contact Us</h2>
-      <p class="lead">Questions about an order, wholesale inquiries, or press? Reach out and we’ll respond as soon as we can</p>
+ <main class="container">
+  <section class="fade-in" style="padding:48px 0">
+    <h2>Contact Us</h2>
+    <p class="lead">
+      Questions about an order, wholesale inquiries, or press? Reach out and we’ll respond as soon as we can
+    </p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px">
-        <div>
-         <form 
-  id="contact-form"
-  action="https://formspree.io/f/xqekdgkq"
-  method="POST"
-  style="display:flex;flex-direction:column;gap:12px"
->
-  <input class="input" name="name" placeholder="Your name" required>
-  <input class="input" name="email" type="email" placeholder="Email address" required>
-  <input class="input" name="subject" placeholder="Subject">
-  <textarea class="input" name="message" rows="6" placeholder="Message" required style="resize:vertical"></textarea>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px">
+      <div>
 
-  <div style="display:flex;gap:12px">
-    <button type="submit" class="btn btn-primary">Send Message</button>
-    <button type="reset" class="btn btn-ghost">Reset</button>
-  </div>
+        <form id="contact-form" action="https://formspree.io/f/xqekdgkq" method="POST">
+          <input type="hidden" name="_subject" value="New Kinberline Contact Message">
+          <input type="hidden" name="_format" value="plain">
 
-  <!-- Success + error messages -->
-  <p id="form-status" style="margin-top:10px;font-size:0.95rem;"></p>
-</form>
-     
+          <input class="input" name="name" placeholder="Your name" required>
+          <input class="input" name="email" type="email" placeholder="Email address" required>
+          <input class="input" name="subject" placeholder="Subject">
+          <textarea class="input" name="message" rows="6" placeholder="Message" required style="resize:vertical"></textarea>
 
-        </div>
+          <div style="display:flex;gap:12px">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+
+          <!-- Success + error messages -->
+          <p id="form-status" style="margin-top:10px;font-size:0.95rem;"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+</main>
+
 
         <div style="color:var(--muted)">
           <h3 style="font-family:Playfair Display,serif">Wholesale and Press</h3>
@@ -322,4 +326,5 @@ document.addEventListener("DOMContentLoaded", () => {
 </body>
 
 </html>
+
 
