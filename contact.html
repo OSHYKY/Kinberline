@@ -212,24 +212,23 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px">
       <div>
 
-        <!-- ONLY ONE FORM TAG -->
-        <form id="contact-form" action="https://formspree.io/f/xqekdgkq" method="POST">
-          <input type="hidden" name="_subject" value="New Kinberline Contact Message">
-          <input type="hidden" name="_format" value="plain">
+      <form id="contact-form" action="https://formspree.io/f/xqekdgkq" method="POST">
+  <input type="hidden" name="_subject" value="New Kinberline Contact Message">
+  <input type="hidden" name="_format" value="plain">
 
-          <input class="input" name="name" placeholder="Your name" required>
-          <input class="input" name="email" type="email" placeholder="Email address" required>
-          <input class="input" name="subject" placeholder="Subject">
-          <textarea class="input" name="message" rows="6" placeholder="Message" required style="resize:vertical"></textarea>
+  <input class="input" name="name" placeholder="Your name" required>
+  <input class="input" name="email" type="email" placeholder="Email address" required>
+  <input class="input" name="subject" placeholder="Subject">
+  <textarea class="input" name="message" rows="6" placeholder="Message" required></textarea>
 
-          <div style="display:flex;gap:12px">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <button type="reset" class="btn btn-ghost">Reset</button>
-          </div>
+  <div style="display:flex;gap:12px">
+    <button type="submit" class="btn btn-primary">Send Message</button>
+    <button type="reset" class="btn btn-ghost">Reset</button>
+  </div>
 
-          <p id="form-status" style="margin-top:10px;font-size:0.95rem;"></p>
-        </form>
-
+  <p id="form-status"></p>
+</form>
+ 
       </div>
     </div>
   </section>
@@ -330,6 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </body>
 
 </html>
+
 
 
 
