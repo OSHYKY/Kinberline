@@ -179,25 +179,30 @@
   </style>
 </head>
 <body>
-  <nav class="container">
-    <div class="logo">KINBERLINE</div>
-   
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-  ☰
-</button>
+ <nav>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
 
+    <div class="logo">KINBERLINE</div>
+
+    <!-- Mobile toggle button -->
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+    <!-- Links -->
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="shop.html">Shop</a>
-      <a href="collections.html" aria-current="page">Collections</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
+
+    <!-- Desktop-only actions -->
     <div class="nav-actions">
-      <button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle theme">☾</button>
-      <a class="btn btn-primary" href="shop.html">Shop Earrings</a>
+      <button class="btn btn-ghost" onclick="window.location.href='shop.html'">Shop Now</button>
     </div>
-  </nav>
+
+  </div>
+</nav>
+
 
   <main>
     <header class="hero" style="background-image: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06)), url('assets/images/collections-hero.jpg')">
@@ -294,3 +299,4 @@
 ---
 
  
+
