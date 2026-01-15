@@ -349,9 +349,41 @@
 </script>
 
 
-</body>
+  <script>
+  // Choose which products to feature on the homepage
+  const featuredIDs = ["blush-studs", "sunset-drops", "midnight-hoops"];
 
+  async function loadFeatured() {
+    const container = document.getElementById("featured-products");
+    const res = await fetch("products.json");
+    const products = await res.json();
+
+    const featured = products.filter(p => featuredIDs.includes(p.id));
+
+    featured.forEach(p => {
+      const card = document.createElement("article");
+      card.className = "card fade-in";
+      card.innerHTML = `
+        <img src="${p.images[0]}" alt="${p.name}">
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <p>${p.short}</p>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="price">£${p.price.toFixed(2)}</div>
+            <a class="badge" href="product.html?id=${p.id}">View</a>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  loadFeatured();
+</script>
+
+</body>
 </html>
+
 
 
 
